@@ -31,16 +31,28 @@ function ProductDetail() {
   if (!product) return <p>Yükleniyor...</p>;
 
   return (
-    <div style={{ padding: "20px",}}>
-      <h2>{product.name}</h2>
+    <div style={{ padding: "20px",display: "flex",gap: "20px", alignItems: "flex-start"}}>
+      
       <img 
         src={getImage(product.name)} 
         alt={product.name} 
-        style={{ width: "400px", height: "200", marginBottom: "20px" }}
+        style={{ width: "400px",  height: "200", marginBottom: "20px" , float : "left"}}
       />
-      <p style={{ fontSize: "18px" }}>{product.description}</p>
-      <p style={{ fontSize: "18px" }}>Fiyat: {Number(product.price).toLocaleString()} TL</p>
-      <p style={{ fontSize: "18px" }}>Stok: {product.stock} adet</p>
+      <div>
+      <h2>{product.name}</h2>
+      <p style={{ fontSize: "18px" , float: "center" }}>{product.description}</p>
+      <p style={{ fontSize: "18px" , float: "center"}}>Fiyat: {Number(product.price).toLocaleString()} TL</p>
+      <p style={{ fontSize: "18px" , float: "center"}}>Stok: {product.stock} adet</p>
+      <button 
+              className="add-to-cart"
+              onClick={(e) => {
+                e.stopPropagation(); // Butona basınca yeni sekmeye gitmesin
+                console.log("Sepete eklendi:", product.name);
+              }}
+            >
+              Sepete Ekle
+        </button>
+        </div>
     </div>
   );
 }
