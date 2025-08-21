@@ -1,0 +1,74 @@
+/* src/components/Login.css */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  background-color: hwb(0 100% 0%);
+  font-family: sans-serif;
+}
+
+.login-box {
+  background-color: #e0e0e0;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-box form div {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.login-box label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.login-box input[type="email"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #10d083;
+  border-radius: 4px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-box button:hover {
+  background-color: #0056b3;    
+}
+
+.login-box p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-image {
+  width: 150px; /* Resim genişliği */
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 50%; /* Resme yuvarlak bir şekil verir */
+  object-fit: cover;
+  
+}

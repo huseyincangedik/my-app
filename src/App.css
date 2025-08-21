@@ -1,0 +1,121 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+/* .read-the-docs {
+  color: #888;
+} */
+
+.site-logo {
+  height: 90px; /* Logomun yüksekliğini ayarlar */
+  width: auto; /* Genişliği otomatik ayarlar */
+  margin-right: 40px; /* Diğer menü öğelerinden boşluk bırakır */
+}
+
+.menu ul {
+  list-style: none; /* nokta işaretlerini kaldırır */
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none; /* alt çizgiyi kaldırır */
+  color: rgb(255, 255, 255);          /* yazı rengini siyah yapar */
+}
+
+.menu ul {
+  display: flex;
+  gap: 100px;
+  list-style: none;
+  margin: 0;
+  padding:0;
+  font-size: 150%;
+}
+
+.page-content {
+  margin-top: 50px; /* Menü ile içerik arasında 20px boşluk bırakır */
+}
+
+
+.menu {
+  display: flex;
+  justify-content: space-between; /* Menü ve arama kısmını ayırır */
+  align-items: center;
+  gap: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between; /* logo+menu / search form */
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* veya flex-end, center */
+  margin-bottom: 0; /* alt boşluğu kaldır */
+  margin-top: -50px; /* üst boşluk ekle */
+  margin-left: 100px;
+}
+
+.search-form input {
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-form button {
+  padding: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  
+}
+
+.search-form button:hover {
+  background-color: #0056b3;
+}
+ 
+.container , .menu {
+  background-color: #929292;
+}

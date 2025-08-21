@@ -1,0 +1,93 @@
+/* Ana kapsayıcıyı (container) merkezler ve arka planı ayarlar */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  background-color: hwb(0 100% 0%);
+  font-family: sans-serif;
+}
+
+/* Kayıt kutusunun (box) stilini belirler */
+.register-box {
+ background-color: #e0e0e0;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+/* Resmin boyutunu ve stilini ayarlar */
+.register-image {
+  width: 150px; /* Resim genişliği */
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 50%; /* Resme yuvarlak bir şekil verir */
+  object-fit: cover;
+}
+
+/* Başlık (h2) stili */
+.register-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form alanları için genel stil */
+.register-box form div {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Etiket (label) stili */
+.register-box label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Giriş kutusu (input) stili */
+.register-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; /* Padding ve border'ın genişliğe dahil olmasını sağlar */
+  font-size: 16px;
+}
+
+/* Butonun stili */
+.register-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff; /* Mavi arka plan */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Butonun üzerine gelindiğinde renk değişimi */
+.register-box button:hover {
+  background-color: #0056b3; /* Daha koyu mavi */
+}
+
+/* Paragraf (p) ve Link stili */
+.register-box p {
+  margin-top: 20px;
+  color: #666;
+}
+
+.register-box p a {
+  color: #007bff;
+  text-decoration: none; /* Alt çizgiyi kaldırır */
+  font-weight: bold;
+}
+
+.register-box p a:hover {
+  text-decoration: underline; /* Üzerine gelindiğinde alt çizgi ekler */
+}
