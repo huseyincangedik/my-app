@@ -66,7 +66,7 @@ function App() {
         </div>
 
         {/* Axios ile çekilen veriler (örnek tablo) */}
-        <div className="container"> 
+        {/* <div className="container"> 
           <h1>Products</h1>
           <ul>
             {products.map(p => (
@@ -80,7 +80,7 @@ function App() {
               <li key={o.id}>Order #{o.id} - Product ID: {o.product_id} - Qty: {o.quantity}</li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
     </Router>
   );

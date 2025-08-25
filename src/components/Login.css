@@ -1,5 +1,6 @@
 /* src/components/Login.css */
 
+/* Ana kapsayıcı */
 .login-container {
   display: flex;
   flex-direction: column;
@@ -10,6 +11,7 @@
   font-family: sans-serif;
 }
 
+/* Login kutusu */
 .login-box {
   background-color: #e0e0e0;
   padding: 40px;
@@ -19,56 +21,78 @@
   text-align: center;
 }
 
+/* Başlık */
 .login-box h2 {
   margin-bottom: 20px;
   color: #333;
 }
 
+/* Form alanları */
 .login-box form div {
-  margin-bottom: 15px;
+  margin-bottom: 15px;  
   text-align: left;
 }
 
+/* Etiket (label) */
 .login-box label {
   display: block;
+  font-weight: bold;
   margin-bottom: 5px;
   color: #555;
 }
 
-.login-box input[type="email"],
-.login-box input[type="password"] {
+/* Input alanları */
+.login-box input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #10d083;
-  border-radius: 4px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
+/* Buton */
 .login-box button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: #007bff;
-  color: #e0e0e0;
+  color: white;
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
   margin-top: 10px;
 }
 
+/* Hover efekti */
 .login-box button:hover {
   background-color: #0056b3;    
 }
 
+/* Paragraf (alt yazı) */
 .login-box p {
   margin-top: 15px;
   font-size: 14px;
+  color: #666;
 }
 
+.login-box p a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-box p a:hover {
+  text-decoration: underline;
+}
+
+/* Resim */
 .login-image {
-  width: 150px; /* Resim genişliği */
+  width: 150px;
   height: auto;
   margin-bottom: 20px;
-  border-radius: 50%; /* Resme yuvarlak bir şekil verir */
+  border-radius: 50%;
   object-fit: cover;
-  
 }
