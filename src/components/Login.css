@@ -1,98 +1,49 @@
-/* src/components/Login.css */
-
-/* Ana kapsayıcı */
 .login-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: auto;
-  background-color: hwb(0 100% 0%);
-  font-family: sans-serif;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
 }
 
-/* Login kutusu */
 .login-box {
-  background-color: #e0e0e0;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
   text-align: center;
+  margin-bottom: 200px;
 }
 
-/* Başlık */
 .login-box h2 {
   margin-bottom: 20px;
   color: #333;
 }
 
-/* Form alanları */
-.login-box form div {
-  margin-bottom: 15px;  
-  text-align: left;
-}
-
-/* Etiket (label) */
-.login-box label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #555;
-}
-
-/* Input alanları */
 .login-box input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-size: 16px;
+  width: 80%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-/* Buton */
 .login-box button {
   width: 100%;
   padding: 12px;
-  background-color: #007bff;
-  color: white;
+  margin-top: 12px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 8px;
+  background-color: #4caf50;
+  color: white;
   font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Hover efekti */
 .login-box button:hover {
-  background-color: #0056b3;    
-}
-
-/* Paragraf (alt yazı) */
-.login-box p {
-  margin-top: 15px;
-  font-size: 14px;
-  color: #666;
-}
-
-.login-box p a {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.login-box p a:hover {
-  text-decoration: underline;
-}
-
-/* Resim */
-.login-image {
-  width: 150px;
-  height: auto;
-  margin-bottom: 20px;
-  border-radius: 50%;
-  object-fit: cover;
+  background-color: #45a049;
 }

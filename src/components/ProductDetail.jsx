@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { useCart } from "./CartContext.jsx";
 
 import iphone from '../assets/ıphone15.jpg';
 import samsung from '../assets/samsun25.png';
-import xiaomi from '../assets/xiaomi.jpg'; 
-import huawei from '../assets/huawei.jpg'; 
-import google from '../assets/google.jpg'; 
+import xiaomi from '../assets/xiaomi.jpg';
+import huawei from '../assets/huawei.jpg';
+import google from '../assets/google.jpg';
+
 
 function ProductDetail() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const { addToCart } = useCart();
 
   const getImage = (name) => {
     const lower = name.toLowerCase();
@@ -31,28 +34,35 @@ function ProductDetail() {
   if (!product) return <p>Yükleniyor...</p>;
 
   return (
-    <div style={{ padding: "20px",display: "flex",gap: "20px", alignItems: "flex-start"}}>
-      
-      <img 
-        src={getImage(product.name)} 
-        alt={product.name} 
-        style={{ width: "400px",  height: "200", marginBottom: "20px" , float : "left"}}
+    <div style={{ padding: "20px", display: "flex", gap: "20px", alignItems: "flex-start" }}>
+
+      <img
+        src={getImage(product.name)}
+        alt={product.name}
+        style={{
+          width: "300px",
+          height: "300px",
+          objectFit: "cover",  // kırparak kutuyu doldur
+          borderRadius: "8px"
+        }}
       />
       <div>
-      <h2>{product.name}</h2>
-      <p style={{ fontSize: "18px" , float: "center" }}>{product.description}</p>
-      <p style={{ fontSize: "18px" , float: "center"}}>Fiyat: {Number(product.price).toLocaleString()} TL</p>
-      <p style={{ fontSize: "18px" , float: "center"}}>Stok: {product.stock} adet</p>
-      <button 
-              className="add-to-cart"
-              onClick={(e) => {
-                e.stopPropagation(); // Butona basınca yeni sekmeye gitmesin
-                console.log("Sepete eklendi:", product.name);
-              }}
-            >
-              Sepete Ekle
+        <h2>{product.name}</h2>
+        <p style={{ fontSize: "18px", float: "center" }}>{product.description}</p>
+        <p style={{ fontSize: "18px", float: "center" }}>Fiyat: {Number(product.price).toLocaleString()} TL</p>
+        <p style={{ fontSize: "18px", float: "center" }}>Stok: {product.stock} adet</p>
+        <button
+
+          className="add-to-cart"
+          onClick={(e) => {
+            e.stopPropagation();
+            addToCart(product);
+            console.log("Sepete eklendi:", product.name);
+          }}
+        >
+          Sepete Ekle
         </button>
-        </div>
+      </div>
     </div>
   );
 }

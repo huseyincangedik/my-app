@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +24,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -37,85 +40,58 @@
   padding: 2em;
 }
 
-/* .read-the-docs {
-  color: #888;
-} */
-
 .site-logo {
-  height: 90px; /* Logomun yüksekliğini ayarlar */
-  width: auto; /* Genişliği otomatik ayarlar */
-  margin-right: 40px; /* Diğer menü öğelerinden boşluk bırakır */
+  height:100px;
+  width: 100px;
+  margin-right: 40px;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #929292;
 }
 
 .menu ul {
-  list-style: none; /* nokta işaretlerini kaldırır */
-  margin: 0;
+  display: contents;
+  gap: 50px;
+  list-style: none;
+  margin: 10px 0;
   padding: 0;
+  font-size: 140%;
 }
 
 .menu a {
-  text-decoration: none; /* alt çizgiyi kaldırır */
-  color: rgb(255, 255, 255);          /* yazı rengini siyah yapar */
-}
-
-.menu ul {
-  display: flex;
-  gap: 100px;
-  list-style: none;
-  margin: 0;
-  padding:0;
-  font-size: 150%;
-}
-
-.page-content {
-  margin-top: 50px; /* Menü ile içerik arasında 20px boşluk bırakır */
-}
-
-
-.menu {
-  display: flex;
-  justify-content: space-between; /* Menü ve arama kısmını ayırır */
-  align-items: center;
-  gap: 20px;
-}
-
-.menu {
-  display: flex;
-  justify-content: space-between; /* logo+menu / search form */
-  align-items: center;
+  text-decoration: none;
+  color: #fff;
 }
 
 .search-form {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* veya flex-end, center */
-  margin-bottom: 0; /* alt boşluğu kaldır */
-  margin-top: -50px; /* üst boşluk ekle */
-  margin-left: 100px;
+  margin: 0;
+  margin-right: 70px;
 }
 
 .search-form input {
-  padding: 5px;
+  padding: 5px 15px;
   border: 2px solid #ccc;
-  border-radius: 4px;
+  border-radius: 4px 0 0 4px;
 }
 
 .search-form button {
-  padding: 5px;
+  padding: 10px 20px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
-  width: 100px;
   height: 30px;
-  
 }
 
 .search-form button:hover {
   background-color: #0056b3;
-}
- 
-.container , .menu {
-  background-color: #929292;
+
 }
