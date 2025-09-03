@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import "./Register.css";
+import loginImage from '../assets/login.image.jpg';
 
 function Register() {
   const [form, setForm] = useState({
@@ -30,6 +31,7 @@ function Register() {
   return (
     <div className="register-container">
       <div className="register-box">
+        <img src={loginImage} alt="Kayıt Resmi" className="register-image" /> {/* Resim buraya eklendi */}
         <h2>Register</h2>
         <input
           type="text"

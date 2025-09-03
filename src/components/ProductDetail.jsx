@@ -3,15 +3,10 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useCart } from "./CartContext.jsx";
 
-import iphone from '../assets/ıphone15.jpg';
-import samsung from '../assets/samsun25.png';
-import xiaomi from '../assets/xiaomi.jpg';
-import huawei from '../assets/huawei.jpg';
-import google from '../assets/google.jpg';
-
+// ... (resim importları)
 
 function ProductDetail() {
-  const { id } = useParams();
+  const { id } = useParams(); // URL'den gelen id'yi yakalar
   const [product, setProduct] = useState(null);
   const { addToCart } = useCart();
 
@@ -22,37 +17,37 @@ function ProductDetail() {
     if (lower.includes("xiaomi")) return xiaomi;
     if (lower.includes("huawei")) return huawei;
     if (lower.includes("google")) return google;
-    return "https://via.placeholder.com/300";
+    return "https://via.placeholder.com/200";
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/products/${id}`)
+    // API isteği şimdi tek bir ürünü id'ye göre çekiyor
+    axios.get(`https://localhost:44320/api/Products/`)
       .then(res => setProduct(res.data))
       .catch(err => console.error(err));
-  }, [id]);
+  }, [id]); // id değiştiğinde tekrar çalışır
 
-  if (!product) return <p>Yükleniyor...</p>;
+  if (!product) {
+      return <p>Yükleniyor...</p>;
+  }
 
   return (
     <div style={{ padding: "20px", display: "flex", gap: "20px", alignItems: "flex-start" }}>
-
       <img
         src={getImage(product.name)}
         alt={product.name}
         style={{
           width: "300px",
           height: "300px",
-          objectFit: "cover",  // kırparak kutuyu doldur
+          objectFit: "cover",
           borderRadius: "8px"
         }}
       />
       <div>
         <h2>{product.name}</h2>
-        <p style={{ fontSize: "18px", float: "center" }}>{product.description}</p>
         <p style={{ fontSize: "18px", float: "center" }}>Fiyat: {Number(product.price).toLocaleString()} TL</p>
         <p style={{ fontSize: "18px", float: "center" }}>Stok: {product.stock} adet</p>
         <button
-
           className="add-to-cart"
           onClick={(e) => {
             e.stopPropagation();

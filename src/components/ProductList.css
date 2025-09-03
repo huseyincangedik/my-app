@@ -1,87 +1,43 @@
-/* .product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
+/* ProductList.css */
 
-.product-card {
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 15px;
-  text-align: center;
-  transition: 0.3s;
-  background: #fff;
-}
-
-.product-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transform: translateY(-5px);
-}
-
-.product-name {
-  font-weight: bold;
-  font-size: 18px;
-  margin: 10px 0;
-  text-transform: capitalize;
-}
-
-.product-price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #e60000;
-  margin: 10px 0;
-}
-
-.product-stock {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.add-to-cart {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.add-to-cart:hover {
-  background: #0056b3;
-}
-
+/* Ürün kartlarını içeren kapsayıcı */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* Otomatik olarak sığacak kadar sütun oluşturur.
+     Her sütun minimum 250px genişliğinde, maksimum 1fr (kalan boşluğu doldurur) olacak. */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
 }
 
+/* Her bir ürün kartı */
 .product-card {
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 15px;
   text-align: center;
-  transition: 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* İçeriği dikeyde hizalamak için flexbox kullanır */
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Ürün görseli */
-/* .product-img {
+.product-img {
   width: 100%;
-  height: 150px;
-  object-fit: contain;
+  height: 200px;
+  object-fit: contain; /* Resmi oranını bozmadan sığdırır */
   margin-bottom: 10px;
 }
 
+/* Ürün isim ve fiyat bilgileri */
 .product-name {
   font-weight: bold;
   font-size: 18px;
@@ -102,6 +58,7 @@
   margin-bottom: 10px;
 }
 
+/* Sepete Ekle butonu */
 .add-to-cart {
   background: #007bff;
   color: white;
@@ -109,50 +66,11 @@
   padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s;
+  width: 100%; /* Kartın genişliğini doldurur */
+  margin-top: auto; /* Kartın en altına hizalar */
 }
 
 .add-to-cart:hover {
   background: #0056b3;
-} */
-
- */
- .product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: start;
 }
-
-.product-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
-  transition: transform 0.2s;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.product-img {
-  width: 100%;
-  height: auto;
-}
-
-.add-to-cart {
-  margin-top: 10px;
-  padding: 5px 10px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 3px;
-}
-
-.add-to-cart:hover {
-  background-color: #0056b3;
-}
-
