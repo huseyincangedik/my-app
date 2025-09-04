@@ -20,7 +20,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    axios.get("https://localhost:44320/ProductForecast/products")
+    axios.get("https://localhost:44320/Products/products")
       .then(res => setProducts(res.data))
       .catch(err => console.log(err));
 

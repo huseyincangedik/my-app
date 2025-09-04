@@ -10,7 +10,7 @@ function ProductsPage() {
 useEffect(() => {
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("https://localhost:44320/ProductForecast/products"); 
+      const res = await axios.get("https://localhost:44320/Products/products"); 
       console.log("API'den gelen veri:", res.data);
       setProducts(res.data);
     } catch (err) {
